@@ -37,7 +37,7 @@ public class ReceiveLogs01 {
         /*
         把交换机和队列进行绑定
          */
-        channel.queueBind(queueName,EXCHANGE_NAME,"");
+        channel.queueBind(queueName,EXCHANGE_NAME,"qqq");
         System.out.println("等待接收消息,打印");
         channel.basicConsume(queueName,true,deliverCallback,cusumerTag->{});
     }
